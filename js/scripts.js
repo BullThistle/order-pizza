@@ -1,9 +1,9 @@
 function Pizza(toppings, size) {
     this.toppings = toppings;
     this.size = size;
-}
+};
 
-Pizza.prototype.price = function() {
+Pizza.prototype.sizePrice = function() {
     var price = 0;
     if(this.size == "small"){
         price = 9.99;
@@ -14,11 +14,25 @@ Pizza.prototype.price = function() {
     } else if(this.size == "xtra-large"){
         price = 18.49;
     }
-    return this.firstName + " " + this.lastName;
+    return price;
 };
 
+Pizza.prototype.toppingPrice = function() {
+        var price = 0;
+        if(this.size == "small"){
+            price = this.toppings * 1.75;
+        } else if(this.size == "medium"){
+            price = this.toppings * 2;
+        } else if(this.size == "large"){
+            price = this.toppings * 2.25;
+        } else if(this.size == "xtra-large"){
+            price = this.toppings * 2.50;
+        }
+        return price;
+}
+
 function toppingsChecked(){
-        var inputElems = document.getElementById("toppings"),
+        var inputElems = document.getElementsByClassName("tops"),
         toppings = 0;
         for (var i=0; i<inputElems.length; i++) {
                 if (inputElems[i].type === "checkbox" && inputElems[i].checked === true){
@@ -29,8 +43,13 @@ function toppingsChecked(){
 }
 
 $(document).ready(function() {
+        $("#pizza-form").submit(function(event){
+                event.preventDefault();
+                var toppings = toppingsChecked();
+                var size = $("input[name='pizza-size']:checked").val();
+                var pizza = new Pizza(toppings, size);
+                var price = (pizza.sizePrice()  + pizza.toppingPrice());
+                $("#total-price").text(price);
 
-
-
-
-})
+        });
+});

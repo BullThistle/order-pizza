@@ -12,38 +12,38 @@
                 <div class="jumbotron">Order Pizza</div>
                 <div class="container">
                         <div class="row">
-                                <div class="col-xs-6 col-md-4">
-                                        <form id="toppings"></form>
+                                <form id="pizza-form">
+                                        <div class="col-xs-6 col-md-4">
                                                 <h2>Cheeses</h2>
-                                                <input type="checkbox" name="tops">Feta
+                                                <input type="checkbox" class="tops">Feta
                                                 <br>
-                                                <input type="checkbox" name="tops">Ricotta
+                                                <input type="checkbox" class="tops">Ricotta
                                                 <br>
-                                                <input type="checkbox" name="tops">Goat Cheese
+                                                <input type="checkbox" class="tops">Goat Cheese
                                                 <br>
-                                                <input type="checkbox" name="tops">Extra Mozzerella
+                                                <input type="checkbox" class="tops">Extra Mozzerella
                                                 <br>
                                                 <h2>Vegetables</h2>
-                                                <input type="checkbox" name="tops">Artichoke Hearts
+                                                <input type="checkbox" class="tops">Artichoke Hearts
                                                 <br>
-                                                <input type="checkbox" name="tops">Black Olives
+                                                <input type="checkbox" class="tops">Black Olives
                                                 <br>
-                                                <input type="checkbox" name="tops">Green Peppers
+                                                <input type="checkbox" class="tops">Green Peppers
                                                 <br>
-                                                <input type="checkbox" name="tops">Mushrooms
+                                                <input type="checkbox" class="tops">Mushrooms
                                                 <br>
                                                 <h2>Meats</h2>
-                                                <input type="checkbox" name="tops">Bacon
+                                                <input type="checkbox" class="tops">Bacon
                                                 <br>
-                                                <input type="checkbox" name="tops">Chicken Breast
+                                                <input type="checkbox" class="tops">Chicken Breast
                                                 <br>
-                                                <input type="checkbox" name="tops">Italian Sausage
+                                                <input type="checkbox" class="tops">Italian Sausage
                                                 <br>
-                                                <input type="checkbox" name="tops">Pepperoni
+                                                <input type="checkbox" class="tops">Pepperoni
                                                 <br>
-                                </div>
-                                <div class="col-xs-6 col-md-4">
-                                        <form class="size">
+                                        </div>
+                                        <div class="col-xs-6 col-md-4">
+                                                <h2>Size</h2>
                                                 <input type="radio" name="pizza-size" value="small"> Small
                                                 <br>
                                                 <input type="radio" name="pizza-size" value="medium"> Medium
@@ -52,11 +52,11 @@
                                                 <br>
                                                 <input type="radio" name="pizza-size" value="xtra-large"> Xtra Large
                                                 <br>
+                                                <input type="submit" value="Submit">
                                         </form>
                                 </div>
                                 <div class="col-xs-6 col-md-4">
-                                                <input type='number' id='quantity'/>
-                                                <span id='total_price'></span>
+                                        <p id="total-price"></p>
                                 </div>
                         </div>
                 </div>
