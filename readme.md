@@ -1,6 +1,6 @@
-# Rafael's Portfolio
+# Order Pizza
 
-#### Class exercise for Epicodus, 08.18.2017
+#### Class exercise for Epicodus, 08.25.2017
 
 #### By Rafael Furry
 
