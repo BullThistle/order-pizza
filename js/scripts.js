@@ -31,6 +31,12 @@ Pizza.prototype.toppingPrice = function() {
         return price;
 }
 
+Pizza.prototype.price = function() {
+        var price = this.sizePrice()  + this.toppingPrice();
+        price = price.toFixed(2);
+        return price;
+}
+
 function toppingsChecked(){
         var inputElems = document.getElementsByClassName("tops"),
         toppings = 0;
@@ -48,8 +54,7 @@ $(document).ready(function() {
                 var toppings = toppingsChecked();
                 var size = $("input[name='pizza-size']:checked").val();
                 var pizza = new Pizza(toppings, size);
-                var price = (pizza.sizePrice()  + pizza.toppingPrice());
-                $("#total-price").text(price);
+                $("#total-price").text(pizza.price());
 
         });
 });

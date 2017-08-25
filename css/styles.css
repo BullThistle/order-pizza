@@ -1,3 +1,15 @@
 .jumbotron{
     text-align: center;
+    font-size: 10vh;
+}
+
+.body{
+        font-family: 'Satisfy', cursive;
+}
+
+p{
+        font-size: 7vh;
+}
+#pizza-form{
+        font-size: 2vh;
 }
